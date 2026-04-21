@@ -1,139 +1,134 @@
-# 📊 Probability and Statistics
+# Probability and Statistics
 
-> A hands-on collection of Jupyter Notebooks covering core concepts in **Probability and Statistics** using Python — from data types and dispersion to probability distributions, Bayesian inference, and a real-world spam detection classifier.
+A sequentially structured series of Jupyter Notebooks exploring probability theory and statistical analysis in Python. The notebooks build progressively from foundational concepts — data types, variable classification, and measures of dispersion — through to discrete and continuous probability distributions, with an applied project implementing a Naive Bayes spam classifier from first principles.
 
 ---
 
-## 📌 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Notebooks](#notebooks)
 - [Project Structure](#project-structure)
 - [Getting Started](#getting-started)
 - [Topics Covered](#topics-covered)
-- [Technologies Used](#technologies-used)
+- [Dependencies](#dependencies)
 - [Author](#author)
 
 ---
 
-## 🔍 Overview
+## Overview
 
-This repository is a structured, notebook-based learning series on **Probability and Statistics** implemented in Python. Each notebook focuses on a specific concept, building progressively from foundational data types and descriptive statistics all the way to probability distributions and applied machine learning with Naïve Bayes.
+This repository is a self-directed study log covering the core curriculum of an introductory probability and statistics course, implemented entirely in Python. Each notebook is a self-contained lesson combining written explanation, code, and output in a single document. The notebooks are numbered to indicate the intended reading order.
 
-The notebooks are designed to be readable, executable, and educational — making them a great reference for students, data science learners, or anyone looking to strengthen their statistical foundations.
-
----
-
-## 📓 Notebooks
-
-| # | Notebook | Topics Covered |
-|---|----------|----------------|
-| 01 | [`01datatypes.ipynb`](01datatypes.ipynb) | Statistical data types — nominal, ordinal, interval, ratio |
-| 02 | [`02-variables-.ipynb`](02-variables-.ipynb) | Types of variables — discrete, continuous, dependent, independent |
-| 03 | [`03-dispersion.ipynb`](03-dispersion.ipynb) | Measures of dispersion — variance, standard deviation, range, IQR |
-| 04 | [`04-coin-flips.ipynb`](04-coin-flips.ipynb) | Probability fundamentals via coin flip simulations |
-| 05 | [`05-spam-detection.ipynb`](05-spam-detection.ipynb) | Applied Bayes' theorem — building a spam classifier |
-| 06 | [`06-distribution.ipynb`](06-distribution.ipynb) | Discrete distributions — Binomial, Poisson, Geometric |
-| 07 | [`07-Continuous-Distributions.ipynb`](07-Continuous-Distributions.ipynb) | Continuous distributions — Normal, Uniform, Exponential |
+The applied highlight of the series is notebook 05, which uses Bayes' theorem to build a working spam detection classifier — a concrete demonstration of how probabilistic reasoning translates into a real machine learning technique.
 
 ---
 
-## 📁 Project Structure
+## Notebooks
+
+| # | File | Description |
+|---|------|-------------|
+| 01 | [01datatypes.ipynb](01datatypes.ipynb) | Statistical data types: nominal, ordinal, interval, and ratio scales |
+| 02 | [02-variables-.ipynb](02-variables-.ipynb) | Variable classification: discrete, continuous, dependent, and independent |
+| 03 | [03-dispersion.ipynb](03-dispersion.ipynb) | Measures of spread: range, variance, standard deviation, and IQR |
+| 04 | [04-coin-flips.ipynb](04-coin-flips.ipynb) | Classical probability and the law of large numbers via coin flip simulation |
+| 05 | [05-spam-detection.ipynb](05-spam-detection.ipynb) | Bayes' theorem applied: building a Naive Bayes spam classifier from scratch |
+| 06 | [06-distribution.ipynb](06-distribution.ipynb) | Discrete distributions: Binomial, Poisson, and Geometric |
+| 07 | [07-Continuous-Distributions.ipynb](07-Continuous-Distributions.ipynb) | Continuous distributions: Normal, Uniform, and Exponential |
+
+---
+
+## Project Structure
 
 ```
 Probability-and-Statistics/
 │
-├── 01datatypes.ipynb                    # Data types in statistics
-├── 02-variables-.ipynb                  # Types of variables
-├── 03-dispersion.ipynb                  # Measures of spread
-├── 04-coin-flips.ipynb                  # Intro to probability
-├── 05-spam-detection.ipynb              # Naïve Bayes spam classifier
-├── 06-distribution.ipynb                # Discrete probability distributions
-├── 07-Continuous-Distributions.ipynb    # Continuous probability distributions
+├── 01datatypes.ipynb
+├── 02-variables-.ipynb
+├── 03-dispersion.ipynb
+├── 04-coin-flips.ipynb
+├── 05-spam-detection.ipynb
+├── 06-distribution.ipynb
+├── 07-Continuous-Distributions.ipynb
 │
-├── Python/                              # Supporting Python scripts
-├── assets/                              # Images and visual assets used in notebooks
+├── Python/                     # Supplementary Python scripts
+├── assets/                     # Images and plots referenced in the notebooks
 │
 └── README.md
 ```
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
-### Prerequisites
-
-- Python 3.7+
-- Jupyter Notebook or JupyterLab
-
-### Installation
+**Prerequisites:** Python 3.7 or higher, with Jupyter Notebook or JupyterLab installed.
 
 ```bash
-# Clone the repository
 git clone https://github.com/KA6-p/Probability-and-Statistics.git
 cd Probability-and-Statistics
-
-# Install required dependencies
 pip install numpy pandas matplotlib scipy jupyter
-
-# Launch Jupyter
 jupyter notebook
 ```
 
-Then open any `.ipynb` file from the Jupyter interface to get started.
+Open any `.ipynb` file from the Jupyter interface. Notebooks are independent but are best read in numerical order if you are new to the subject.
 
 ---
 
-## 🧩 Topics Covered
+## Topics Covered
 
-### 📐 Descriptive Statistics
-- Data types: nominal, ordinal, interval, and ratio scales
-- Variable types: discrete vs. continuous, dependent vs. independent
-- Measures of dispersion: **range**, **variance**, **standard deviation**, **interquartile range (IQR)**
+### Descriptive Statistics
 
-### 🎲 Probability
-- Classical probability with coin flip experiments
-- Law of large numbers — simulating repeated trials to observe convergence
-- **Bayes' Theorem** — conditional probability and its real-world application
+- The four scales of measurement (nominal, ordinal, interval, ratio) and why the distinction matters for choosing statistical methods
+- Discrete versus continuous variables; dependent versus independent variables
+- Measures of central tendency and spread: mean, median, range, variance, standard deviation, and interquartile range
+- Visualising distributions with histograms and box plots
 
-### 🤖 Applied Probability — Spam Detection
-- Building a **Naïve Bayes classifier** from scratch
-- Calculating prior and likelihood probabilities from a dataset
-- Classifying emails as spam or ham using probabilistic reasoning
+### Probability Theory
 
-### 📈 Probability Distributions
+- Sample spaces, events, and the definition of probability
+- Simulating coin flips with `numpy.random` to demonstrate the law of large numbers empirically
+- Conditional probability and Bayes' theorem: `P(A|B) = P(B|A) * P(A) / P(B)`
 
-**Discrete:**
-- Binomial distribution
-- Poisson distribution
-- Geometric distribution
+### Applied Bayes — Spam Classifier (Notebook 05)
 
-**Continuous:**
-- Normal (Gaussian) distribution
-- Uniform distribution
-- Exponential distribution
+- Representing a labelled email dataset as a frequency table
+- Computing prior probabilities for spam and ham classes
+- Computing likelihoods for individual words given each class
+- Classifying unseen messages by selecting the class with the higher posterior probability
+- Understanding the "naive" independence assumption and when it holds in practice
 
----
+### Discrete Probability Distributions (Notebook 06)
 
-## 🛠️ Technologies Used
+- **Binomial** — modelling the number of successes in a fixed number of independent Bernoulli trials
+- **Poisson** — modelling event counts over a fixed interval when events occur independently at a constant rate
+- **Geometric** — modelling the number of trials needed to achieve the first success
 
-| Tool | Purpose |
-|------|---------|
-| `Python 3` | Core programming language |
-| `Jupyter Notebook` | Interactive development and visualization |
-| `NumPy` | Numerical computations and simulations |
-| `Pandas` | Data manipulation and analysis |
-| `Matplotlib` / `Seaborn` | Plotting and data visualization |
-| `SciPy` | Statistical functions and distributions |
+### Continuous Probability Distributions (Notebook 07)
+
+- **Normal (Gaussian)** — the bell curve; the central limit theorem; z-scores and standardisation
+- **Uniform** — equal probability across a bounded interval
+- **Exponential** — modelling time between independent events in a Poisson process
 
 ---
 
-## 👤 Author
+## Dependencies
 
-**KA6-p** — [GitHub Profile](https://github.com/KA6-p)
+| Package | Purpose |
+|---------|---------|
+| `numpy` | Numerical computation, random simulation |
+| `pandas` | Data manipulation and frequency tables |
+| `matplotlib` | Plotting distributions and simulation results |
+| `scipy` | Probability density and cumulative distribution functions |
+| `jupyter` | Interactive notebook environment |
+
+Install all dependencies with:
+
+```bash
+pip install numpy pandas matplotlib scipy jupyter
+```
 
 ---
 
-## 📄 License
+## Author
 
-This project is open source and available for educational purposes.
+**KA6-p** — [github.com/KA6-p](https://github.com/KA6-p)
